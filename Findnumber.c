@@ -13,7 +13,7 @@ static inline void initCounters ()
   // Enable user access to performance counter
   asm volatile ("MCR p15, 0, %0, C9, C14, 0\t\n" :: "r"(1));
   // Reset all counters to zero
-  int MCRP15ResetAll = 31; 
+  int MCRP15ResetAll = 23; 
   asm volatile ("MCR p15, 0, %0, c9, c12, 0\t\n" :: "r"(MCRP15ResetAll));  
   // Enable all counters:  
   asm volatile ("MCR p15, 0, %0, c9, c12, 1\t\n" :: "r"(0x8000000f));  
@@ -65,8 +65,7 @@ int x, y;
 
   initCounters();
 time = getCycles();
-time = getCycles() - time;
-printf ("Elapsed Time: %d cycles\n", time);
+
 totalcycles = 0;
 while(1){
   totalcycles = 0;
@@ -83,11 +82,7 @@ for(x =0; x<640*480; x++){
   *clk = 0;
   while(*clkin == 1);
   } // for
-time = getCycles() - time;
-printf ("Photo to Memory: %d cycles\n", time);
-totalcycles += time;
 
-time = getCycles();
 int locx1 = -1;
 int    locy1 = -1;
 int   locx2 = -1; 
@@ -129,12 +124,7 @@ int   locy2 = -1;
           if(flag)
               locx2 = i;
     }
-   time = getCycles() - time;
-printf ("Find ROI: %d cycles\n", time);
-printf("x coords: %d : %d\n", locx1, locx2);
-//digits = 3;(
-totalcycles += time;
-time = getCycles();
+
 width = locx2-locx1;
 
 height = locy2-locy1;
@@ -190,15 +180,10 @@ for ( f = 0; f < thumbheight; f++) // y on output
         picture3[f*28+g] = (sum > threshold) ? 1 : 0;
     }
 }
-time = getCycles() - time;
-printf ("Scale digit%d: %d cycles\n", digits, time);
-totalcycles+= time;
-time = getCycles();
+
 matrixMult = 0;
 matrixAdd = 0;
 sigmoid = 0;
-totalcycles+=getCycles() - time;
-time  = getCycles();
 for(y=0; y<200; y++){
   ztotal = 0;
   for(x=0; x<784; x++){
@@ -218,11 +203,7 @@ for(y=0; y<200; y++){
       //sigmoid += getCycles() - time2;
                     }
 //rintf("first weights done\n");
-  time = getCycles() - time;
-  printf("Stage 1 digit: %d \n", time );
-  totalcycles+=time;
-  time = getCycles();
-  printf("time %d\n" , time);
+
 for(y=0;y<200; y++){
   ztotal = 0;
   for(x=0;x<200;x++){
@@ -242,10 +223,7 @@ for(y=0;y<200; y++){
     //sigmoid+= getCycles()- time2;
 }
 
-  time = getCycles()-time;
-  totalcycles+=time;
-  printf("Stage 2 digit: %d \n", time);
-  time = getCycles();
+
 for(y=0;y<10;y++){
   ztotal = 0;
   for(x=0;x<200;x++){
@@ -255,10 +233,7 @@ for(y=0;y<10;y++){
   }
   z3[y] = ztotal;
 }
-time = getCycles()-time;
-printf("Stage3 digit: %D \n", time);
-totalcycles+= time; //0
-time = getCycles();
+
 x= -1;
 double max = 0;
 for(y=0; y<10;y++)
@@ -270,18 +245,17 @@ for(y=0; y<10;y++)
   }
 total*=10;
 total += (x+1)%10;
-time = getCycles() - time;
-printf("Find max(z3):  %d\n", time);
-totalcycles+=time;
+
 //printf ("Analyze Digit %d: %d cycles\n", digits, time);
 //printf("MatrixMult: %d, Matrix Add:%d, Sigmoid: %d\n", matrixMult, matrixAdd, sigmoid);
 //printf("Digit is :%d\n", (x+1)%10);1
 }
+time = getCycles() - time;
+printf ("Elapsed Time: %d cycles\n", time);
 printf("Number is %d\n", total);
-printf("Total Cycles was: %d\n", totalcycles);
-printf("Again?");
-  scanf("%d", threshold);
-  scanf("%c", waste);
+// printf("Again?");
+//   scanf("%d", threshold);
+   scanf("%c", waste);
 }
-return 1;
+//return 1;
 } 
