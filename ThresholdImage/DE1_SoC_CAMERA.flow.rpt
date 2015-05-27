@@ -1,0 +1,281 @@
+Flow report for DE1_SoC_CAMERA
+Mon Mar 30 12:58:37 2015
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++---------------------------------+--------------------------------------------+
+; Flow Status                     ; Successful - Mon Mar 30 12:57:53 2015      ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                   ; DE1_SoC_CAMERA                             ;
+; Top-level Entity Name           ; DE1_SoC_CAMERA                             ;
+; Family                          ; Cyclone V                                  ;
+; Device                          ; 5CSEMA5F31C6                               ;
+; Timing Models                   ; Preliminary                                ;
+; Logic utilization (in ALMs)     ; 2,289 / 32,070 ( 7 % )                     ;
+; Total registers                 ; 2658                                       ;
+; Total pins                      ; 298 / 457 ( 65 % )                         ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 194,512 / 4,065,280 ( 5 % )                ;
+; Total DSP Blocks                ; 1 / 87 ( 1 % )                             ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI TX Channels          ; 0                                          ;
+; Total PLLs                      ; 1 / 6 ( 17 % )                             ;
+; Total DLLs                      ; 1 / 4 ( 25 % )                             ;
++---------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 03/30/2015 12:54:41 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; DE1_SoC_CAMERA      ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                              ;
++---------------------------------------+---------------------------------------------------------------------------+---------------+----------------------------------------------+------------+
+; Assignment Name                       ; Value                                                                     ; Default Value ; Entity Name                                  ; Section Id ;
++---------------------------------------+---------------------------------------------------------------------------+---------------+----------------------------------------------+------------+
+; COMPILER_SIGNATURE_ID                 ; 79554439394792.142774528102444                                            ; --            ; --                                           ; --         ;
+; ECO_REGENERATE_REPORT                 ; On                                                                        ; Off           ; --                                           ; --         ;
+; HPS_ISW_FILE                          ; StartSignal/synthesis/submodules/sequencer/alt_types.pre.h                ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; HPS_ISW_FILE                          ; StartSignal/synthesis/submodules/sequencer/emif.pre.xml                   ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; HPS_ISW_FILE                          ; StartSignal/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; HPS_ISW_FILE                          ; StartSignal/synthesis/submodules/sequencer/sequencer.pre.c                ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; HPS_ISW_FILE                          ; StartSignal/synthesis/submodules/sequencer/sequencer.pre.h                ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; HPS_ISW_FILE                          ; StartSignal/synthesis/submodules/sequencer/sequencer_auto.pre.h           ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; HPS_ISW_FILE                          ; StartSignal/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c   ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; HPS_ISW_FILE                          ; StartSignal/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; HPS_ISW_FILE                          ; StartSignal/synthesis/submodules/sequencer/sequencer_defines.pre.h        ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; HPS_ISW_FILE                          ; StartSignal/synthesis/submodules/sequencer/system.pre.h                   ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; HPS_ISW_FILE                          ; StartSignal/synthesis/submodules/sequencer/tclrpt.pre.c                   ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; HPS_ISW_FILE                          ; StartSignal/synthesis/submodules/sequencer/tclrpt.pre.h                   ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; HPS_ISW_FILE                          ; StartSignal/synthesis/submodules/hps.pre.xml                              ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; HPS_PARTITION                         ; On                                                                        ; --            ; StartSignal_Arm_A9_HPS_hps_io_border         ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal                                  ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_Arm_A9_HPS                       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_Arm_A9_HPS_hps_io                ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_irq_mapper                       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_irq_mapper_001                   ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_0                ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_0_addr_router    ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_0_cmd_xbar_demux ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_0_cmd_xbar_mux   ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_0_id_router      ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_0_rsp_xbar_demux ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_0_rsp_xbar_mux   ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_1                ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_1_addr_router    ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_1_cmd_xbar_demux ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_1_cmd_xbar_mux   ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_1_id_router      ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_1_rsp_xbar_demux ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_mm_interconnect_1_rsp_xbar_mux   ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_pio_0                            ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_pio_1                            ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_pio_2                            ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_ram                              ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_start_signal                     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; StartSignal_system_console                   ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; altera_avalon_sc_fifo                        ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; altera_merlin_axi_master_ni                  ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; altera_merlin_burst_adapter                  ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; altera_merlin_slave_agent                    ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; altera_merlin_slave_translator               ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; altera_merlin_traffic_limiter                ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; altera_merlin_width_adapter                  ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                      ; --            ; altera_reset_controller                      ; --         ;
+; IP_TOOL_ENV                           ; mwpim                                                                     ; --            ; sdram_pll                                    ; --         ;
+; IP_TOOL_ENV                           ; mwpim                                                                     ; --            ; sdram_pll                                    ; --         ;
+; IP_TOOL_ENV                           ; mwpim                                                                     ; --            ; sdram_pll_0002                               ; --         ;
+; IP_TOOL_NAME                          ; Shift register (RAM-based)                                                ; --            ; --                                           ; --         ;
+; IP_TOOL_NAME                          ; FIFO                                                                      ; --            ; --                                           ; --         ;
+; IP_TOOL_NAME                          ; FIFO                                                                      ; --            ; --                                           ; --         ;
+; IP_TOOL_NAME                          ; Qsys                                                                      ; --            ; StartSignal                                  ; --         ;
+; IP_TOOL_NAME                          ; altera_hps                                                                ; --            ; StartSignal_Arm_A9_HPS                       ; --         ;
+; IP_TOOL_NAME                          ; altera_hps_io                                                             ; --            ; StartSignal_Arm_A9_HPS_hps_io                ; --         ;
+; IP_TOOL_NAME                          ; altera_irq_mapper                                                         ; --            ; StartSignal_irq_mapper                       ; --         ;
+; IP_TOOL_NAME                          ; altera_irq_mapper                                                         ; --            ; StartSignal_irq_mapper_001                   ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_interconnect_wrapper                                        ; --            ; StartSignal_mm_interconnect_0                ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                      ; --            ; StartSignal_mm_interconnect_0_addr_router    ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                               ; --            ; StartSignal_mm_interconnect_0_cmd_xbar_demux ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                 ; --            ; StartSignal_mm_interconnect_0_cmd_xbar_mux   ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                      ; --            ; StartSignal_mm_interconnect_0_id_router      ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                               ; --            ; StartSignal_mm_interconnect_0_rsp_xbar_demux ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                 ; --            ; StartSignal_mm_interconnect_0_rsp_xbar_mux   ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_interconnect_wrapper                                        ; --            ; StartSignal_mm_interconnect_1                ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                      ; --            ; StartSignal_mm_interconnect_1_addr_router    ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                               ; --            ; StartSignal_mm_interconnect_1_cmd_xbar_demux ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                 ; --            ; StartSignal_mm_interconnect_1_cmd_xbar_mux   ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                      ; --            ; StartSignal_mm_interconnect_1_id_router      ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                               ; --            ; StartSignal_mm_interconnect_1_rsp_xbar_demux ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                 ; --            ; StartSignal_mm_interconnect_1_rsp_xbar_mux   ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_pio                                                         ; --            ; StartSignal_pio_0                            ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_pio                                                         ; --            ; StartSignal_pio_1                            ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_pio                                                         ; --            ; StartSignal_pio_2                            ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_onchip_memory2                                              ; --            ; StartSignal_ram                              ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_pio                                                         ; --            ; StartSignal_start_signal                     ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_jtag_uart                                                   ; --            ; StartSignal_system_console                   ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_sc_fifo                                                     ; --            ; altera_avalon_sc_fifo                        ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_axi_master_ni                                               ; --            ; altera_merlin_axi_master_ni                  ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_burst_adapter                                               ; --            ; altera_merlin_burst_adapter                  ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_slave_agent                                                 ; --            ; altera_merlin_slave_agent                    ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_slave_translator                                            ; --            ; altera_merlin_slave_translator               ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_traffic_limiter                                             ; --            ; altera_merlin_traffic_limiter                ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_width_adapter                                               ; --            ; altera_merlin_width_adapter                  ; --         ;
+; IP_TOOL_NAME                          ; altera_reset_controller                                                   ; --            ; altera_reset_controller                      ; --         ;
+; IP_TOOL_NAME                          ; altera_pll                                                                ; --            ; sdram_pll                                    ; --         ;
+; IP_TOOL_NAME                          ; altera_pll                                                                ; --            ; sdram_pll                                    ; --         ;
+; IP_TOOL_NAME                          ; altera_pll                                                                ; --            ; sdram_pll_0002                               ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; --                                           ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; --                                           ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; --                                           ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal                                  ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_Arm_A9_HPS                       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_Arm_A9_HPS_hps_io                ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_irq_mapper                       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_irq_mapper_001                   ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_0                ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_0_addr_router    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_0_cmd_xbar_demux ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_0_cmd_xbar_mux   ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_0_id_router      ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_0_rsp_xbar_demux ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_0_rsp_xbar_mux   ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_1                ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_1_addr_router    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_1_cmd_xbar_demux ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_1_cmd_xbar_mux   ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_1_id_router      ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_1_rsp_xbar_demux ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_mm_interconnect_1_rsp_xbar_mux   ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_pio_0                            ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_pio_1                            ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_pio_2                            ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_ram                              ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_start_signal                     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; StartSignal_system_console                   ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; altera_avalon_sc_fifo                        ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; altera_merlin_axi_master_ni                  ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; altera_merlin_burst_adapter                  ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; altera_merlin_slave_agent                    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; altera_merlin_slave_translator               ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; altera_merlin_traffic_limiter                ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; altera_merlin_width_adapter                  ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; altera_reset_controller                      ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; sdram_pll                                    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; sdram_pll                                    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                      ; --            ; sdram_pll_0002                               ; --         ;
+; MAX_CORE_JUNCTION_TEMP                ; 85                                                                        ; --            ; --                                           ; --         ;
+; MIN_CORE_JUNCTION_TEMP                ; 0                                                                         ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/../../StartSignal.cmp                               ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/../../C                                             ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/StartSignal_Arm_A9_HPS_hps.svd                      ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/../../StartSignal.qsys                              ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/submodules/sequencer/alt_types.pre.h                ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/submodules/sequencer/emif.pre.xml                   ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/submodules/sequencer/sequencer.pre.c                ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/submodules/sequencer/sequencer.pre.h                ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/submodules/sequencer/sequencer_auto.pre.h           ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c   ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/submodules/sequencer/sequencer_defines.pre.h        ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/submodules/sequencer/system.pre.h                   ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/submodules/sequencer/tclrpt.pre.c                   ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/submodules/sequencer/tclrpt.pre.h                   ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; StartSignal/synthesis/submodules/hps.pre.xml                              ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; v/sdram_pll.cmp                                                           ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; v/sdram_pll_sim/sdram_pll.vo                                              ; --            ; --                                           ; --         ;
+; MISC_FILE                             ; v/Line_Buffer1.bsf                                                        ; --            ; --                                           ; --         ;
+; PARTITION_COLOR                       ; 16764057                                                                  ; --            ; --                                           ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL   ; PLACEMENT_AND_ROUTING                                                     ; --            ; --                                           ; Top        ;
+; PARTITION_NETLIST_TYPE                ; SOURCE                                                                    ; --            ; --                                           ; Top        ;
+; SLD_FILE                              ; StartSignal/synthesis/StartSignal.regmap                                  ; --            ; --                                           ; --         ;
+; SLD_FILE                              ; StartSignal/synthesis/StartSignal.debuginfo                               ; --            ; --                                           ; --         ;
+; SLD_INFO                              ; QSYS_NAME StartSignal HAS_SOPCINFO 1 GENERATION_ID 1426290844             ; --            ; StartSignal                                  ; --         ;
+; SOPCINFO_FILE                         ; StartSignal/synthesis/../../StartSignal.sopcinfo                          ; --            ; --                                           ; --         ;
+; SPD_FILE                              ; v/sdram_pll.spd                                                           ; --            ; --                                           ; --         ;
+; SYNTHESIS_ONLY_QIP                    ; On                                                                        ; --            ; --                                           ; --         ;
+; SYNTHESIS_ONLY_QIP                    ; On                                                                        ; --            ; --                                           ; --         ;
+; USE_DLL_FREQUENCY_FOR_DQS_DELAY_CHAIN ; On                                                                        ; Off           ; --                                           ; --         ;
++---------------------------------------+---------------------------------------------------------------------------+---------------+----------------------------------------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:30     ; 1.0                     ; 748 MB              ; 00:00:20                           ;
+; Fitter                    ; 00:02:17     ; 1.0                     ; 2347 MB             ; 00:02:08                           ;
+; Assembler                 ; 00:00:15     ; 1.0                     ; 696 MB              ; 00:00:14                           ;
+; TimeQuest Timing Analyzer ; 00:00:42     ; 1.0                     ; 1269 MB             ; 00:00:41                           ;
+; Total                     ; 00:03:44     ; --                      ; --                  ; 00:03:23                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; MSIGinley        ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; MSIGinley        ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; MSIGinley        ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; MSIGinley        ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC_CAMERA -c DE1_SoC_CAMERA
+quartus_fit --read_settings_files=off --write_settings_files=off DE1_SoC_CAMERA -c DE1_SoC_CAMERA
+quartus_asm --read_settings_files=off --write_settings_files=off DE1_SoC_CAMERA -c DE1_SoC_CAMERA
+quartus_sta DE1_SoC_CAMERA -c DE1_SoC_CAMERA
+
+
+
