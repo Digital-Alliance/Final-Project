@@ -43,6 +43,8 @@ volatile int *datain = (int*) 0xFF200030;
 volatile int *clkin = (int*) 0xFF200040;
 double z1[200], z2[200], z3[10];
 double ztotal;
+double zexp;
+int threshold;
 char waste;
 int digits;
 int width, height;
@@ -51,6 +53,11 @@ int i,j;
 i =1; j=1;
 int flag = 0;
 unsigned long time; 
+unsigned long totalcycles;
+unsigned int matrixMult;
+unsigned int matrixAdd;
+unsigned int sigmoid;
+unsigned int time2;
 int c;
  *start = 0; *ready = 0; *clk =0;
 
@@ -120,7 +127,7 @@ int   locy2 = -1;
 width = locx2-locx1;
 
 height = locy2-locy1;
-digits = width/height+1;
+digits = width/height;
 width2 = (int) (width/digits);
 //printf("%d\n", width2);
 //int pixes[height*width2];
@@ -173,7 +180,9 @@ for ( f = 0; f < thumbheight; f++) // y on output
     }
 }
 
-
+matrixMult = 0;
+matrixAdd = 0;
+sigmoid = 0;
 
 for(y=0; y<200; y++){
   ztotal = 0;
